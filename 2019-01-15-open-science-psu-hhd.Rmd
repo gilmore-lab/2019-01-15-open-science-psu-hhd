@@ -1,0 +1,316 @@
+---
+title: "Open science about human health & behavior"
+output: 
+  revealjs::revealjs_presentation:
+    self_contained: false
+    lib_dir: libs
+    incremental: false
+    theme: simple
+    transition: none
+    reveal_plugins: ["notes", "zoom"]
+    reveal_options:
+      slideNumber: true
+      previewLinks: false
+      center: true
+      touch: true
+---
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
+<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=150px>
+</br>
+<img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
+<img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
+<img src="https://www.unicef.org.hk/wp-content/uploads/2017/08/Logo-05_Lego-foundation_UNICEF_partnership.jpg" height=150px />
+</br>
+<img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/>
+<img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/>
+
+<!-- Funding sources with icons -->
+
+## Agenda
+
+- Some questions to ponder
+- The "ethos" of science
+- Issues, ideas, tools, & practices
+- An open science future...
+
+# Questions to ponder
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<https://www.youtube.com/embed/66oNv_DJuPc>
+
+## What proportion of findings in the published scientific literature (in the fields you care about) are *actually true*?
+
+---
+
+- 100%
+- 90%
+- 70%
+- 50%
+- 30%
+
+## How do we define what "*actually true*" means?
+
+## Is there a reproducibility crisis in science?
+
+>- Yes, a significant crisis
+>- Yes, a slight crisis
+>- No crisis
+>- Don't know
+
+---
+
+<div class="centered">
+<img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=550px>
+</br>
+<small>
+([Baker, 2016](http://doi.org/10.1038/533452a))
+</small>
+</div>
+
+<div class="notes">
+Nature conducted a survey of some 1,600 scientists in 2016. They were asked this question and a few others. Here are the results.
+</div>
+
+## Have you failed to repoduce an experiment from your lab or someone else's
+
+---
+
+<div class="centered">
+<img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" width=700px>
+</br>
+<small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
+</div>
+
+<div class="notes">
+</div>
+
+## Does this surprise you? Why or why not?
+
+---
+
+<div class="centered">
+<a href="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg">
+<img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" width=800px>
+</a>
+
+<small>[Baker 2016](http://doi.org/10.1038/533452a)</small>
+</div>
+
+<!-- Factors contributing to irreproducible research -->
+
+---
+
+<div class="centered">
+<a href="http://www.nature.com/articles/s41562-016-0021/figures/1">
+<img src="http://www.nature.com/article-assets/npg/nathumbehav/2017/s41562-016-0021/images_hires/w926/s41562-016-0021-f1.jpg" height=500px>
+</a>
+
+<small>[Munafo et al. 2017](http://doi.org/10.1038/s41562-016-0021)</small>
+</div>
+
+# The 'Ethos' of Science
+
+## Robert Merton
+
+<img src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg"/>
+
+---
+
+<img src="https://www.klinebooks.com/pictures/28217.jpg?v=1428617395"/>
+
+## "Mertonian" norms
+
+>- **universalism**: scientific validity is independent of sociopolitical status/personal attributes of its participants
+>- **communalism**: common ownership of scientific goods (intellectual property)
+>- **disinterestedness**: scientific institutions benefit a common scientific enterprise, not specific individuals
+>- **organized skepticism**: claims should be exposed to critical scrutiny before being accepted
+
+## Some threats to these norms
+
+>- Scientific validity depends on the status of its participants
+>- Scientific goods/findings are not owned or shared with all
+>- Scientific institutions benefit individuals, not society as a whole
+>- Scientific claims are accepted or promoted without exposure to critical scrutiny
+
+# Issues, ideas, tools, & practices
+
+## What is reproducibility?
+
+## *Methods* reproducibility
+
+- Enough details about materials & methods recorded (& reported)
+- Same results with same materials & methods
+
+<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+
+<div class="notes">
+Goodman et al. advocate a new lexicon for reproducibility where...
+</div>
+
+---
+
+<div class="centered">
+<img src="http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAABtg/VQIfae1_wtQ/hit_thumb%5B3%5D.jpg?imgmax=800" height=550>
+</div>
+<div class="notes">
+I like to call this the "hit by a truck" scenario.
+</div>
+
+## *Results* reproducibility
+- Same results from independent study
+<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+<div class="notes">
+Goodman et al. advocate a new lexicon for reproducibility where...
+</div>
+
+## *Inferential* reproducibility
+
+- Same inferences from one or more studies or reanalyses
+
+<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+<div class="notes">
+Goodman et al. advocate a new lexicon for reproducibility where...
+</div>
+
+## What is version control?
+
+<img src="http://smutch.github.io/VersionControlTutorial/_images/vc-xkcd.jpg" height = 500px/>
+
+---
+
+- thesis_new.docx
+- thesis_new.new.docx
+- thesis_new.new.final.docx
+
+vs.
+
+- thesis_2019-01-15v01.docx
+- thesis_2019-01-15v02.docx
+- thesis_2019-01-16v01.docx
+
+## Version control systems
+
+- Used in large-scale software engineering
+- svn, bitbucket, git
+- GitHub
+
+## Where/how to share data?
+
+- Lab website vs.
+- Supplemental information with journal article vs.
+- Data repository
+    - [Open Science Framework (OSF)](http://osf.io)
+    - [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
+    - [Databrary](http://databrary.org)
+    - [OpenNeuro](http://openneuro.org)
+
+## Tools for reproducible workflows
+
+- Data in interoperable formats (.txt or .csv)
+- Scripted analyses (SPSS, SAS, R, Python)
+- [Rmarkdown](https://rmarkdown.rstudio.com)
+- [Jupyter notebooks](https://jupyter.org/)
+
+## What are registered reports and pre-registration about?
+
+<img src="https://cdn.cos.io/media/images/registered_reports.width-800.png/">
+
+<https://cos.io/rr/>
+
+## Why
+
+- Nosek: "Don't fool yourself"
+- Separate *confirmatory* from *exploratory* analyses
+- Confirmatory (hypothesis-driven): *p*-hacking matters
+- Exploratory: *p*-values hard(er) to interpret
+
+## How/where
+
+- OSF: <http://help.osf.io/m/registrations/l/524205-register-your-project>
+- [AsPredicted.org](https://aspredicted.org/)
+
+---
+
+<img src="img/as-predicted-1.jpg"
+
+---
+
+<img src="img/as-predicted-2.jpg" height=550px/>
+
+---
+
+<img src="img/as-predicted-3.jpg" height=550px/>
+
+---
+
+<img src="img/as-predicted-4.jpg" height=550px/>
+
+## Skeptics and converts
+
+- Susan Goldin-Meadow (skeptic), ["Why pregistration makes me nervous"](https://www.psychologicalscience.org/observer/why-preregistration-makes-me-nervous)
+- Mike Frank (former skeptic, now advocate), ["Pregister everything"](http://babieslearninglanguage.blogspot.com/2016/07/preregister-everything.html)
+
+# An open science future...
+
+---
+
+> "*The advancement of detailed and diverse knowledge about the development of the world’s children is essential for improving the health and well-being of humanity...*"
+
+<small>SRCD Task Force on Scientific Integrity and Openness</small>
+
+---
+
+> "*We regard scientific integrity, transparency, and openness as essential for the conduct of research and its application to practice and policy...*"
+
+<small>SRCD Task Force on Scientific Integrity and Openness</small>
+
+---
+
+>"*...the principles of human subject research require an analysis of both risks and benefits...such an analysis suggests that researchers may have a positive duty to share data in order to maximize the contribution that individual participants have made.*"
+
+<small>[Brakewood & Poldack, 2013](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)</small>
+
+---
+
+<div class="centered">
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+</div>
+
+<!-- We don't have to be like the blind men and the elephant -->
+
+---
+
+<div class="centered">
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=550px>
+</div>
+
+
+---
+
+<video width="800" loop data-autoplay>
+  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+  </video>
+
+rogilmore@psu.edu
+
+<https://gilmore-lab.github.io>
+
+<https://gilmore-lab.github.io/2019-01-15-open-science-psu-hhd/>
+
+---
+
+## Stack
+
+This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
+The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-01-15-open-seicne-psu-hhd/>.
+Information about the R Session that produced the code is as follows:
+
+```{r session-info}
+sessionInfo()
+```
+
