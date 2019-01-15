@@ -1,7 +1,8 @@
 ---
-title: "Open science about human health & behavior"
+title: "An open science of human health & behavior"
 output: 
   revealjs::revealjs_presentation:
+    css: styles.css
     self_contained: false
     lib_dir: libs
     incremental: false
@@ -57,6 +58,8 @@ output:
 
 ## Is there a reproducibility crisis in science?
 
+---
+
 >- Yes, a significant crisis
 >- Yes, a slight crisis
 >- No crisis
@@ -65,7 +68,7 @@ output:
 ---
 
 <div class="centered">
-<img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=550px>
+<img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=600px>
 </br>
 <small>
 ([Baker, 2016](http://doi.org/10.1038/533452a))
@@ -76,7 +79,7 @@ output:
 Nature conducted a survey of some 1,600 scientists in 2016. They were asked this question and a few others. Here are the results.
 </div>
 
-## Have you failed to repoduce an experiment from your lab or someone else's
+## Have you failed to repoduce an experiment from your lab or someone else's?
 
 ---
 
@@ -110,20 +113,20 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 <img src="http://www.nature.com/article-assets/npg/nathumbehav/2017/s41562-016-0021/images_hires/w926/s41562-016-0021-f1.jpg" height=500px>
 </a>
 
-<small>[Munafo et al. 2017](http://doi.org/10.1038/s41562-016-0021)</small>
+<small>[(Munafo et al. 2017)](http://doi.org/10.1038/s41562-016-0021)</small>
 </div>
 
 # The 'Ethos' of Science
 
 ## Robert Merton
 
-<img src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg" height=450px/>
 
 ---
 
 <img src="https://www.klinebooks.com/pictures/28217.jpg?v=1428617395"/>
 
-## "Mertonian" norms
+---
 
 >- **universalism**: scientific validity is independent of sociopolitical status/personal attributes of its participants
 >- **communalism**: common ownership of scientific goods (intellectual property)
@@ -137,9 +140,34 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 >- Scientific institutions benefit individuals, not society as a whole
 >- Scientific claims are accepted or promoted without exposure to critical scrutiny
 
+---
+
+<img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/>
+
+---
+
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
+---
+
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
 # Issues, ideas, tools, & practices
 
-## What is reproducibility?
+---
+
+- What is reproducibility?
+- What is version control?
+- Where/how to share data?
+- Tools for reproducible workflows
+- What's preregistration about?
+- What are these big replication studies about?
+
+# What is reproducibility?
 
 ## *Methods* reproducibility
 
@@ -177,7 +205,9 @@ Goodman et al. advocate a new lexicon for reproducibility where...
 Goodman et al. advocate a new lexicon for reproducibility where...
 </div>
 
-## What is version control?
+# What is version control?
+
+---
 
 <img src="http://smutch.github.io/VersionControlTutorial/_images/vc-xkcd.jpg" height = 500px/>
 
@@ -199,7 +229,19 @@ vs.
 - svn, bitbucket, git
 - GitHub
 
-## Where/how to share data?
+## How I use GitHub
+
+- Every project gets a repository
+- Work locally, commit (save & increment version), push to GitHub
+- Talks, classes, software, analyses, web sites
+
+---
+
+<img src="github-gilmorelab.jpg"/>
+
+# Where/how to share data?
+
+---
 
 - Lab website vs.
 - Supplemental information with journal article vs.
@@ -208,21 +250,122 @@ vs.
     - [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
     - [Databrary](http://databrary.org)
     - [OpenNeuro](http://openneuro.org)
+    
+---
 
-## Tools for reproducible workflows
+<img src="img/gilmore-practical-solutions.jpg" width=900px/>
+
+
+
+# Reproducible workflows
+
+---
 
 - Data in interoperable formats (.txt or .csv)
-- Scripted analyses (SPSS, SAS, R, Python)
-- [Rmarkdown](https://rmarkdown.rstudio.com)
-- [Jupyter notebooks](https://jupyter.org/)
+- Scripted, automated = minimize human-dependent steps.
+- Well-documented
+- Kind to your future (forgetful) self
+- Transparent to me & colleagues == transparent to others
 
-## What are registered reports and pre-registration about?
+---
+
+```
+# Import/gather data
+
+# Clean data
+
+# Visualize data
+
+# Analyze data
+
+# Report findings
+```
+
+---
+
+```
+# Import data
+my_data <- read.csv("path/2/data_file.csv")
+
+# Clean data
+my_data$gender <- tolower(my_data$gender) # make lower case
+...
+```
+
+---
+
+```
+# Import data
+source("R/Import_data.R") # source() runs scripts, loads functions
+
+# Clean data
+source("R/Clean_data.R")
+
+# Visualize data
+source("R/Visualize_data.R")
+...
+```
+
+# Tools for reproducible workflows
+
+---
+
+- Scripted analyses (SPSS, SAS, R, Python)
+- [Jupyter notebooks](https://jupyter.org/)
+- [Rmarkdown](https://rmarkdown.rstudio.com) via RStudio
+
+## But my SPSS syntax file already does this
+    
+- Great! How are you sharing these files?
+- (And how much would SPSS cost you if you had to buy it yourself?)
+
+## But I prefer {Python, Julia, Ruby, Matlab, ...}
+
+- Great! Let's talk about [R Markdown](https://rmarkdown.rstudio.com/)
+
+## Reproducible research with [R Markdown](https://rmarkdown.rstudio.com/)
+
+- Add-on package to R, developed by the RStudio team
+- Combine text, code, images, video, equations into one document
+- Render into PDF, MS Word, HTML (web page or site, slides, a blog, or even a book)
+
+---
+
+- [R Markdown documentation](https://rmarkdown.rstudio.com/); online [tutorial](http://r4ds.had.co.nz/r-markdown.html); Mike Frank and Chris Hartgerink's [tutorial](https://libscie.github.io/rmarkdown-workshop/handout.html)
+- Similar to Mathematica notebooks, [Jupyter notebooks](http://jupyter.org)
+
+---
+
+```{r}
+x <- rnorm(n = 100, mean = 0, sd = 1)
+hist(x)
+```
+The mean is `r mean(x)`, the range is [`r min(x)`, `r max(x)`].
+
+## Ways to use R Markdown
+
+- Web [pages](http://gilmore-lab.github.io/) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/gilmore-lab.github.io/master/index.Rmd)
+- [Talks](gilmore-lab.github.io/DEVSEC-2018/promise-of-open-dev-sci/) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/DEVSEC-2018/master/promise-of-open-dev-sci/index.Rmd)
+- [Project notes](https://github.com/gilmore-lab/infant-moco-eeg/blob/master/plan-of-work.Rmd)
+- Documentation: [HTML](https://gilmore-lab.github.io/databrary-reqmts-specs/databrary_1.0.html) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/databrary-reqmts-specs/master/databrary_1.0.Rmd)
+
+## Ways to use R Markdown
+
+- Scriptable figures: [PDF](https://github.com/PLAY-behaviorome/site-demographics/blob/master/img/ed-attain-bars-plot-1.pdf) | [Rmd](https://raw.githubusercontent.com/PLAY-behaviorome/site-demographics/master/educational_attainment.Rmd)
+- Scriptable timelines from Datavyu files: [Example](https://github.com/PLAY-behaviorome/video-coding/blob/master/img/NYU019/time-line-plot-00-60-1.png?raw=true) | [Rmd](https://raw.githubusercontent.com/PLAY-behaviorome/video-coding/master/timeline.Rmd) 
+- Papers: [PDF](https://github.com/psu-psychology/r-bootcamp-2018/blob/master/talks/gilmore-hallquist-bootcamp-2018-papaja.pdf) | [Rmd](https://raw.githubusercontent.com/psu-psychology/r-bootcamp-2018/master/talks/gilmore-hallquist-bootcamp-2018-papaja.Rmd)
+
+# What are registered reports and pre-registration about?
+
+---
 
 <img src="https://cdn.cos.io/media/images/registered_reports.width-800.png/">
 
 <https://cos.io/rr/>
 
-## Why
+---
+
+# Why preregister?
 
 - Nosek: "Don't fool yourself"
 - Separate *confirmatory* from *exploratory* analyses
@@ -254,6 +397,62 @@ vs.
 
 - Susan Goldin-Meadow (skeptic), ["Why pregistration makes me nervous"](https://www.psychologicalscience.org/observer/why-preregistration-makes-me-nervous)
 - Mike Frank (former skeptic, now advocate), ["Pregister everything"](http://babieslearninglanguage.blogspot.com/2016/07/preregister-everything.html)
+
+# What are these big replication studies about?
+
+## Studies are underpowered {.smaller}
+
+<div class="centered">
+<img src="http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large" width=600px>
+
+<small>[Szucs & Ioannides, 2017](http://doi.org/10.1371/journal.pbio.2000797)</small>
+</div>
+
+---
+
+<div class="centered">
+> "*Assuming a realistic range of prior probabilities for null hypotheses, false report probability is likely to exceed 50% for the whole literature.*"
+
+[Szucs & Ioannides, 2017](http://doi.org/10.1371/journal.pbio.2000797)
+</div>
+
+## Many Labs
+
+<img src="https://econtent.hogrefe.com/na101/home/literatum/publisher/hogrefe/journals/content/zsp/2014/zsp.2014.45.issue-3/1864-9335_a000178/20150727/images/large/zsp_45_3_142_fig1a.jpeg"/>
+
+<small>[Klein et al. 2014](http://econtent.hogrefe.com/doi/abs/10.1027/1864-9335/a000178)</small>
+
+---
+
+## Reproducibility Project: Psychology (RPP)
+
+> "*...The mean effect size (r) of the replication effects...was half the magnitude of the mean effect size of the original effects...*"
+
+<small>[Open Science Collaboration, 2015](http://science.sciencemag.org/content/349/6251/aac4716)</small>
+
+---
+
+> "*...39% of effects were subjectively rated to have replicated the original result...*"
+
+<small>[Open Science Collaboration, 2015](http://science.sciencemag.org/content/349/6251/aac4716)</small>
+
+---
+
+<img src="https://mfr.osf.io/export?url=https://osf.io/fg4d3/?action=download%26mode=render%26direct%26public_file=True&initialWidth=698&childId=mfrIframe&parentTitle=OSF+%7C+F1+-+EffectSizes.png&parentUrl=https://osf.io/fg4d3/&format=2400x2400.jpeg" height=550px/>
+
+<small>[Camerer et al. 2018](https://www.nature.com/articles/s41562-018-0399-z)</small>
+
+<!-- Figure from Camerer et al. 2018 -->
+
+---
+
+<img src="https://mfr.osf.io/export?url=https://osf.io/8pc9x/?action=download%26mode=render%26direct%26public_file=True&initialWidth=698&childId=mfrIframe&parentTitle=OSF+%7C+F4+-+PeerBeliefs.png&parentUrl=https://osf.io/8pc9x/&format=2400x2400.jpeg" height=550px/>
+
+<small>[Camerer et al. 2018](https://www.nature.com/articles/s41562-018-0399-z)</small>
+
+## If it's too good to be true, it probably isn't
+
+<<https://80000hours.org/psychology-replication-quiz/>
 
 # An open science future...
 
