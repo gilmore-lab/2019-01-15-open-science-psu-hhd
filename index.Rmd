@@ -31,18 +31,19 @@ output:
 
 ## Agenda
 
+- Prelude
 - Some questions to ponder
 - The "ethos" of science
 - Issues, ideas, tools, & practices
 - An open science future...
-
-# Questions to ponder
 
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <https://www.youtube.com/embed/66oNv_DJuPc>
+
+# Questions to ponder
 
 ## What proportion of findings in the published scientific literature (in the fields you care about) are *actually true*?
 
@@ -133,12 +134,7 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 >- **disinterestedness**: scientific institutions benefit a common scientific enterprise, not specific individuals
 >- **organized skepticism**: claims should be exposed to critical scrutiny before being accepted
 
-## Some threats to these norms
-
->- Scientific validity depends on the status of its participants
->- Scientific goods/findings are not owned or shared with all
->- Scientific institutions benefit individuals, not society as a whole
->- Scientific claims are accepted or promoted without exposure to critical scrutiny
+## Are these norms at-risk? How or when?
 
 ---
 
@@ -255,8 +251,6 @@ vs.
 
 <img src="img/gilmore-practical-solutions.jpg" width=900px/>
 
-
-
 # Reproducible workflows
 
 ---
@@ -340,12 +334,14 @@ source("R/Visualize_data.R")
 x <- rnorm(n = 100, mean = 0, sd = 1)
 hist(x)
 ```
+---
+
 The mean is `r mean(x)`, the range is [`r min(x)`, `r max(x)`].
 
 ## Ways to use R Markdown
 
 - Web [pages](http://gilmore-lab.github.io/) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/gilmore-lab.github.io/master/index.Rmd)
-- [Talks](gilmore-lab.github.io/DEVSEC-2018/promise-of-open-dev-sci/) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/DEVSEC-2018/master/promise-of-open-dev-sci/index.Rmd)
+- [Talks](https://gilmore-lab.github.io/DEVSEC-2018/promise-of-open-dev-sci/) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/DEVSEC-2018/master/promise-of-open-dev-sci/index.Rmd)
 - [Project notes](https://github.com/gilmore-lab/infant-moco-eeg/blob/master/plan-of-work.Rmd)
 - Documentation: [HTML](https://gilmore-lab.github.io/databrary-reqmts-specs/databrary_1.0.html) | [Rmd](https://raw.githubusercontent.com/gilmore-lab/databrary-reqmts-specs/master/databrary_1.0.Rmd)
 
@@ -359,13 +355,13 @@ The mean is `r mean(x)`, the range is [`r min(x)`, `r max(x)`].
 
 ---
 
-<img src="https://cdn.cos.io/media/images/registered_reports.width-800.png/">
+<img src="https://cdn.cos.io/media/images/registered_reports.width-800.png"/>
 
 <https://cos.io/rr/>
 
 ---
 
-# Why preregister?
+## Why preregister?
 
 - Nosek: "Don't fool yourself"
 - Separate *confirmatory* from *exploratory* analyses
@@ -403,7 +399,7 @@ The mean is `r mean(x)`, the range is [`r min(x)`, `r max(x)`].
 ## Studies are underpowered {.smaller}
 
 <div class="centered">
-<img src="http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large" width=600px>
+<img src="http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large" width=1000px>
 
 <small>[Szucs & Ioannides, 2017](http://doi.org/10.1371/journal.pbio.2000797)</small>
 </div>

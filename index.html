@@ -497,18 +497,20 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ul>
+<li>Prelude</li>
 <li>Some questions to ponder</li>
 <li>The “ethos” of science</li>
 <li>Issues, ideas, tools, &amp; practices</li>
 <li>An open science future…</li>
 </ul>
 </section>
-<section><section id="questions-to-ponder" class="titleslide slide level1"><h1>Questions to ponder</h1></section><section class="slide level2">
+<section class="slide level2">
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p><a href="https://www.youtube.com/embed/66oNv_DJuPc" class="uri">https://www.youtube.com/embed/66oNv_DJuPc</a></p>
-</section><section id="what-proportion-of-findings-in-the-published-scientific-literature-in-the-fields-you-care-about-are-actually-true" class="slide level2">
+</section>
+<section><section id="questions-to-ponder" class="titleslide slide level1"><h1>Questions to ponder</h1></section><section id="what-proportion-of-findings-in-the-published-scientific-literature-in-the-fields-you-care-about-are-actually-true" class="slide level2">
 <h2>What proportion of findings in the published scientific literature (in the fields you care about) are <em>actually true</em>?</h2>
 </section><section class="slide level2">
 
@@ -579,14 +581,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment"><strong>disinterestedness</strong>: scientific institutions benefit a common scientific enterprise, not specific individuals</li>
 <li class="fragment"><strong>organized skepticism</strong>: claims should be exposed to critical scrutiny before being accepted</li>
 </ul>
-</section><section id="some-threats-to-these-norms" class="slide level2">
-<h2>Some threats to these norms</h2>
-<ul>
-<li class="fragment">Scientific validity depends on the status of its participants</li>
-<li class="fragment">Scientific goods/findings are not owned or shared with all</li>
-<li class="fragment">Scientific institutions benefit individuals, not society as a whole</li>
-<li class="fragment">Scientific claims are accepted or promoted without exposure to critical scrutiny</li>
-</ul>
+</section><section id="are-these-norms-at-risk-how-or-when" class="slide level2">
+<h2>Are these norms at-risk? How or when?</h2>
 </section><section class="slide level2">
 
 <p><img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/></p>
@@ -776,12 +772,14 @@ source(&quot;R/Visualize_data.R&quot;)
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">100</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)
 <span class="kw">hist</span>(x)</code></pre></div>
-<p><img src="2019-01-15-open-science-psu-hhd_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" /> The mean is 0.0587393, the range is [-3.0041673, 2.5341432].</p>
+</section><section id="section" class="slide level2">
+<h2><img src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" /></h2>
+<p>The mean is -0.0879351, the range is [-2.2292997, 2.3981749].</p>
 </section><section id="ways-to-use-r-markdown" class="slide level2">
 <h2>Ways to use R Markdown</h2>
 <ul>
 <li>Web <a href="http://gilmore-lab.github.io/">pages</a> | <a href="https://raw.githubusercontent.com/gilmore-lab/gilmore-lab.github.io/master/index.Rmd">Rmd</a></li>
-<li><a href="gilmore-lab.github.io/DEVSEC-2018/promise-of-open-dev-sci/">Talks</a> | <a href="https://raw.githubusercontent.com/gilmore-lab/DEVSEC-2018/master/promise-of-open-dev-sci/index.Rmd">Rmd</a></li>
+<li><a href="https://gilmore-lab.github.io/DEVSEC-2018/promise-of-open-dev-sci/">Talks</a> | <a href="https://raw.githubusercontent.com/gilmore-lab/DEVSEC-2018/master/promise-of-open-dev-sci/index.Rmd">Rmd</a></li>
 <li><a href="https://github.com/gilmore-lab/infant-moco-eeg/blob/master/plan-of-work.Rmd">Project notes</a></li>
 <li>Documentation: <a href="https://gilmore-lab.github.io/databrary-reqmts-specs/databrary_1.0.html">HTML</a> | <a href="https://raw.githubusercontent.com/gilmore-lab/databrary-reqmts-specs/master/databrary_1.0.Rmd">Rmd</a></li>
 </ul>
@@ -795,12 +793,17 @@ source(&quot;R/Visualize_data.R&quot;)
 </section></section>
 <section><section id="what-are-registered-reports-and-pre-registration-about" class="titleslide slide level1"><h1>What are registered reports and pre-registration about?</h1></section><section class="slide level2">
 
-<p><img src="https://cdn.cos.io/media/images/registered_reports.width-800.png/"></p>
+<p><img src="https://cdn.cos.io/media/images/registered_reports.width-800.png"/></p>
 <p><a href="https://cos.io/rr/" class="uri">https://cos.io/rr/</a></p>
-</section><section class="slide level2">
-
-</section></section>
-<section><section id="why-preregister" class="titleslide slide level1"><h1>Why preregister?</h1></section><section id="howwhere" class="slide level2">
+</section><section id="why-preregister" class="slide level2">
+<h2>Why preregister?</h2>
+<ul>
+<li>Nosek: “Don’t fool yourself”</li>
+<li>Separate <em>confirmatory</em> from <em>exploratory</em> analyses</li>
+<li>Confirmatory (hypothesis-driven): <em>p</em>-hacking matters</li>
+<li>Exploratory: <em>p</em>-values hard(er) to interpret</li>
+</ul>
+</section><section id="howwhere" class="slide level2">
 <h2>How/where</h2>
 <ul>
 <li>OSF: <a href="http://help.osf.io/m/registrations/l/524205-register-your-project" class="uri">http://help.osf.io/m/registrations/l/524205-register-your-project</a></li>
@@ -829,7 +832,7 @@ source(&quot;R/Visualize_data.R&quot;)
 <section><section id="what-are-these-big-replication-studies-about" class="titleslide slide level1"><h1>What are these big replication studies about?</h1></section><section id="studies-are-underpowered" class="slide level2 smaller">
 <h2>Studies are underpowered</h2>
 <div class="centered">
-<p><img src="http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large" width=600px></p>
+<p><img src="http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large" width=1000px></p>
 <p><small><a href="http://doi.org/10.1371/journal.pbio.2000797">Szucs &amp; Ioannides, 2017</a></small></p>
 </div>
 </section><section class="slide level2">
@@ -927,8 +930,8 @@ source(&quot;R/Visualize_data.R&quot;)
 ## loaded via a namespace (and not attached):
 ##  [1] compiler_3.5.1  magrittr_1.5    htmltools_0.3.6 tools_3.5.1    
 ##  [5] revealjs_0.9    yaml_2.2.0      Rcpp_1.0.0      stringi_1.2.4  
-##  [9] rmarkdown_1.11  knitr_1.21      stringr_1.3.1   digest_0.6.18  
-## [13] xfun_0.4        evaluate_0.12</code></pre>
+##  [9] rmarkdown_1.11  knitr_1.21      stringr_1.3.1   xfun_0.4       
+## [13] digest_0.6.18   evaluate_0.12</code></pre>
 </section></section>
     </div>
   </div>
