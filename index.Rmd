@@ -29,6 +29,16 @@ output:
 
 <!-- Funding sources with icons -->
 
+---
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/266px-DenverCP.JPG" height=150px/>
+<img src="http://watson.brown.edu/ds/sites/all/themes/ds/img/header/brown_large.png" height=150px/>
+<img src="https://www.wheretraveler.com/sites/default/files/styles/wt17_promoted/public/WashingtonDC-shutterstock_93633676.jpg?itok=IT7CL9PU" height=150px/>
+<img src="https://ai.cs.cmu.edu/sites/default/files/CMU.png" height=150px/>
+<img src="http://onwardstate.com/wp-content/uploads/2014/10/93" height=150px/>
+<img src="img/sleic.jpg" height=150px/></br>
+<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=150px>
+
 ## Agenda
 
 - Prelude
@@ -80,7 +90,7 @@ output:
 Nature conducted a survey of some 1,600 scientists in 2016. They were asked this question and a few others. Here are the results.
 </div>
 
-## Have you failed to repoduce an experiment from your lab or someone else's?
+## Have you failed to reproduce an experiment from your lab or someone else's?
 
 ---
 
@@ -240,12 +250,14 @@ vs.
 ---
 
 - Lab website vs.
-- Supplemental information with journal article vs.
-- Data repository
-    - [Open Science Framework (OSF)](http://osf.io)
-    - [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
-    - [Databrary](http://databrary.org)
-    - [OpenNeuro](http://openneuro.org)
+- Supplemental information with journal article
+
+## Data repository
+
+- [Open Science Framework (OSF)](http://osf.io)
+- [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
+- [Databrary](http://databrary.org)
+- [OpenNeuro](http://openneuro.org)
     
 ---
 
