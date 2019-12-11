@@ -16,10 +16,15 @@ output:
       touch: true
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
+                      message = FALSE,
+                      fig.align = "center",
+                      out.width = "700px")
+```
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
-<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=150px>
-</br>
+<img src="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/ex89p5pm1bvck2ow3vwd" height=150px></br>
 <img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
 <img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
 <img src="https://www.unicef.org.hk/wp-content/uploads/2017/08/Logo-05_Lego-foundation_UNICEF_partnership.jpg" height=150px />
@@ -78,30 +83,17 @@ output:
 
 ---
 
-<div class="centered">
-<img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=600px>
-</br>
-<small>
-([Baker, 2016](http://doi.org/10.1038/533452a))
-</small>
-</div>
+```{r, fig.cap="[Baker, 2016](http://doi.org/10.1038/533452a)"}
+knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg")
+```
 
-<div class="notes">
-Nature conducted a survey of some 1,600 scientists in 2016. They were asked this question and a few others. Here are the results.
-</div>
-
-## Have you failed to reproduce an experiment from your lab or someone else's?
+## Have you failed to reproduce an analysis from your lab or someone else's?
 
 ---
 
-<div class="centered">
-<img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" width=700px>
-</br>
-<small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
-</div>
-
-<div class="notes">
-</div>
+```{r, fig.cap="[Baker, 2016](http://doi.org/10.1038/533452a)"}
+knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg")
+```
 
 ## Does this surprise you? Why or why not?
 
@@ -167,9 +159,10 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 ---
 
 - What is reproducibility?
-- What is version control?
 - Where/how to share data?
+- What's a reproducible workflow?
 - Tools for reproducible workflows
+- What is version control?
 - What's preregistration about?
 - What are these big replication studies about?
 
@@ -180,7 +173,7 @@ Nature conducted a survey of some 1,600 scientists in 2016. They were asked this
 - Enough details about materials & methods recorded (& reported)
 - Same results with same materials & methods
 
-<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+<small>[Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027)</small>
 
 <div class="notes">
 Goodman et al. advocate a new lexicon for reproducibility where...
@@ -197,7 +190,9 @@ I like to call this the "hit by a truck" scenario.
 
 ## *Results* reproducibility
 - Same results from independent study
-<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+
+<small>[Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027)</small>
+
 <div class="notes">
 Goodman et al. advocate a new lexicon for reproducibility where...
 </div>
@@ -206,44 +201,10 @@ Goodman et al. advocate a new lexicon for reproducibility where...
 
 - Same inferences from one or more studies or reanalyses
 
-<small>([Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027))</small>
+<small>[Goodman et al., 2016](http://doi.org/10.1126/scitranslmed.aaf5027)</small>
 <div class="notes">
 Goodman et al. advocate a new lexicon for reproducibility where...
 </div>
-
-# What is version control?
-
----
-
-<img src="http://smutch.github.io/VersionControlTutorial/_images/vc-xkcd.jpg" height = 500px/>
-
----
-
-- thesis_new.docx
-- thesis_new.new.docx
-- thesis_new.new.final.docx
-
-vs.
-
-- thesis_2019-01-15v01.docx
-- thesis_2019-01-15v02.docx
-- thesis_2019-01-16v01.docx
-
-## Version control systems
-
-- Used in large-scale software engineering
-- svn, bitbucket, git
-- GitHub
-
-## How I use GitHub
-
-- Every project gets a repository
-- Work locally, commit (save & increment version), push to GitHub
-- Talks, classes, software, analyses, web sites
-
----
-
-<img src="github-gilmorelab.jpg"/>
 
 # Where/how to share data?
 
@@ -263,12 +224,14 @@ vs.
 
 <img src="img/gilmore-practical-solutions.jpg" width=900px/>
 
-# Reproducible workflows
+<small>[Gilmore et al. 2018](https://doi.org/10.1177/2515245917746500)</small>
+
+# What's a reproducible workflow?
 
 ---
 
 - Data in interoperable formats (.txt or .csv)
-- Scripted, automated = minimize human-dependent steps.
+- Scripted, automated == minimize human-dependent steps
 - Well-documented
 - Kind to your future (forgetful) self
 - Transparent to me & colleagues == transparent to others
@@ -311,6 +274,11 @@ source("R/Clean_data.R")
 source("R/Visualize_data.R")
 ...
 ```
+
+## Working examples
+
+- [PLAY Protocol](https://play-project.org)
+- [PLAY QA report](https://play-behaviorome.github.io/workflow/session_qa/session-qa-report-899-NYU-2019-12-11-1116.html#play_site_nyu_qa_report)
 
 # Tools for reproducible workflows
 
@@ -362,6 +330,40 @@ The mean is `r mean(x)`, the range is [`r min(x)`, `r max(x)`].
 - Scriptable figures: [PDF](https://github.com/PLAY-behaviorome/site-demographics/blob/master/img/ed-attain-bars-plot-1.pdf) | [Rmd](https://raw.githubusercontent.com/PLAY-behaviorome/site-demographics/master/educational_attainment.Rmd)
 - Scriptable timelines from Datavyu files: [Example](https://github.com/PLAY-behaviorome/video-coding/blob/master/img/NYU019/time-line-plot-00-60-1.png?raw=true) | [Rmd](https://raw.githubusercontent.com/PLAY-behaviorome/video-coding/master/timeline.Rmd) 
 - Papers: [PDF](https://github.com/psu-psychology/r-bootcamp-2018/blob/master/talks/gilmore-hallquist-bootcamp-2018-papaja.pdf) | [Rmd](https://raw.githubusercontent.com/psu-psychology/r-bootcamp-2018/master/talks/gilmore-hallquist-bootcamp-2018-papaja.Rmd)
+
+# What is version control?
+
+---
+
+<img src="http://smutch.github.io/VersionControlTutorial/_images/vc-xkcd.jpg" height = 500px/>
+
+---
+
+- thesis_new.docx
+- thesis_new.new.docx
+- thesis_new.new.final.docx
+
+vs.
+
+- thesis_2019-01-15v01.docx
+- thesis_2019-01-15v02.docx
+- thesis_2019-01-16v01.docx
+
+## Version control systems
+
+- Used in large-scale software engineering
+- svn, bitbucket, git
+- GitHub
+
+## How I use GitHub
+
+- Every project gets a repository
+- Work locally, commit (save & increment version), push to GitHub
+- Talks, classes, software, analyses, web sites
+
+---
+
+<img src="github-gilmorelab.jpg"/>
 
 # What are registered reports and pre-registration about?
 
@@ -514,7 +516,7 @@ rogilmore@psu.edu
 ## Stack
 
 This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
-The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-01-15-open-seicne-psu-hhd/>.
+The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-01-15-open-science-psu-hhd/>.
 Information about the R Session that produced the code is as follows:
 
 ```{r session-info}
